@@ -1,35 +1,17 @@
-# Agentes Inteligentes en Python
+Descripcion de los Agentes
 
-Este repositorio contiene cuatro agentes inteligentes desarrollados en Python para la tarea de Inteligencia Artificial.
+1️ Agente de Patrullaje (Reflejo Simple)
 
-## Problema 1: Agente de Semáforo Inteligente (Reactivo)
-Este agente simula un semáforo inteligente que ajusta la duración de sus estados (verde, amarillo y rojo) según el tráfico detectado.
+Este agente sigue una ruta fija, pero si encuentra un obstáculo, cambia de dirección de manera aleatoria. Su comportamiento es simple, ya que no almacena información del entorno, solo reacciona a lo que tiene enfrente.
 
-### Funcionamiento:
-- Detecta el número de vehículos aleatoriamente.
-- Ajusta el tiempo del semáforo en verde en función del tráfico.
-- Cambia de estado automáticamente.
+2️ Agente Explorador de Mapas (Con Estado Interno)
 
-## Problema 2: Agente Buscador de Objetos (Basado en Objetivos)
-El agente se mueve dentro de una cuadrícula 5x5 hasta encontrar un objeto ubicado aleatoriamente.
+A diferencia del agente anterior, este sí tiene memoria. Mientras se mueve en una cuadrícula, recuerda las posiciones que ya ha visitado para no volver a pasar por ellas, lo que le permite explorar nuevas zonas de manera eficiente.
 
-### Funcionamiento:
-- Representa la cuadrícula con una matriz de NumPy.
-- Se mueve en dirección al objeto paso a paso.
-- Muestra el estado de la cuadrícula en cada movimiento.
+3️ Agente de Navegación Autónoma (Basado en Metas) 🏁
 
-## Problema 3: Sistema Experto para Diagnóstico Simple (Basado en Conocimiento)
-Un sistema experto que sugiere un diagnóstico basado en los síntomas ingresados por el usuario.
+Este agente tiene un objetivo claro: encontrar la salida en un laberinto de 5x5. Utiliza el algoritmo A* para calcular la ruta más corta, evitando obstáculos y optimizando su movimiento hasta llegar a la meta.
 
-### Funcionamiento:
-- Solicita al usuario una lista de síntomas.
-- Aplica reglas basadas en condicionales.
-- Muestra un diagnóstico probable.
+4️ Agente de Selección de Rutas (Basado en Utilidad) 🔝
 
-## Problema 4: Agente de Recomendación de Películas (Basado en Aprendizaje)
-Un sistema que recomienda películas basadas en el género favorito del usuario.
-
-### Funcionamiento:
-- Contiene una lista de películas clasificadas por género.
-- Solicita al usuario que ingrese su género favorito.
-- Muestra una recomendación aleatoria.
+Aquí el objetivo no es solo moverse, sino encontrar la mejor ruta considerando recompensas. Cada celda tiene un valor y el agente evalúa las opciones para elegir el camino con mayor beneficio. Usa el algoritmo de Dijkstra para tomar decisiones inteligentes.
